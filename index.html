@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+            if (enteredCode === correctCode){
+                let arrayCurrentDate = currentDate.split(",");
+                let arrayExpirationDate = expirationDate.split(",");
+                
+                if((arrayCurrentDate[1] <= arrayExpirationDate[1]) && (arrayCurrentDate[0] <= arrayExpirationDate[0])){
+                    return true
+                }
+            }
+                return false
+        }
+
+    </script>
+</body>
+</html>
